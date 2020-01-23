@@ -1,0 +1,10 @@
+setup.py
+PlateMapper.egg-info/PKG-INFO
+PlateMapper.egg-info/SOURCES.txt
+PlateMapper.egg-info/dependency_links.txt
+PlateMapper.egg-info/top_level.txt
+app/__init__.py
+app/actions.py
+app/components.py
+app/connect_to_robot.py
+app/main_window.py
