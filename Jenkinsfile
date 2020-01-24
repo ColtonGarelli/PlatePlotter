@@ -14,7 +14,7 @@ pipeline {
                 echo $HOME
                 /Users/coltongarelli/anaconda3/bin/activate PlateMapper
                 chmod ug+x /app/local/anaconda3/bin/activate
-                pytest --junitxml results.xml test_one.py
+                pytest /tests/*
 
             }
         }
