@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+                python setup.py sdist bdist_wheel
                 echo 'Building'
             }
         }
