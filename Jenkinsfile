@@ -13,7 +13,7 @@ pipeline {
                 #!/bin/bash
                 echo $PATH
                 echo $HOME
-                /app/local/anaconda3/bin/activate PlateMapper
+                /Users/coltongarelli/anaconda3/bin/activate PlateMapper
                 chmod ug+x /app/local/anaconda3/bin/activate
                 pytest --junitxml results.xml test_one.py
 
