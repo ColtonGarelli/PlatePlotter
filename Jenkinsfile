@@ -10,11 +10,8 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo $PATH
-                echo $HOME
-                /Users/coltongarelli/anaconda3/bin/activate PlateMapper
-                chmod ug+x /app/local/anaconda3/bin/activate
-                sh 'pytest ./tests/*'
+                sh 'make check || true'
+                sh 'make check'
             }
         }
         stage('Deploy') {
