@@ -25,19 +25,31 @@ def create_input_box(input_box, text):
     return input_box
 
 
-def add_to_box_layout(layout: QBoxLayout, *items: QWidget,  alignment=None):
+def add_to_box_layout(layout: QBoxLayout, *items: QObject, alignment=None, stretch=None): #use kwargs?
     """
 
     """
-    if alignment is None:
-        for item in items:
-            layout.addWidget(item)
-    else:
-        for item in items:
-            layout.addWidget(item, alignment=alignment)
+    for item in items:
+        if isinstance(item, QWidget):
+            addQThing = layout.addWidget
+        elif isinstance(item, QBoxLayout):
+            addQThing = layout.addLayout
+        else:
+            print("Something is seriously wrong")
+            break
+        if stretch is None and alignment is None:
+            addQThing(item)
+        elif stretch is None and alignment is not None:
+            addQThing(item, alignment=alignment)
+        elif stretch is not None and alignment is None:
+            addQThing(item, stretch=stretch)
+        elif stretch is not None and alignment is not None:
+            addQThing(item, alignment=alignment, stretch=stretch)
+        else:
+            print("Something else just went wrong man")
 
 
-def add_button(group: QButtonGroup, *buttons: QAbstractButton):
+def add_button(group: QButtonGroup, *buttons: [QAbstractButton]):
     """
 
     """

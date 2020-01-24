@@ -1,11 +1,13 @@
 import csv
 import os
 import sys
+from typing import List, Any
 
 import pandas as pd
 from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLineEdit, QMainWindow, QHBoxLayout,\
     QLabel, QWidget, QCheckBox, QPushButton, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
     QMessageBox, Qt, QRadioButton, QHeaderView, QAction
+from PyQt5 import QtGui
 
 from app import actions
 from app import components, connect_to_robot
@@ -23,6 +25,7 @@ from app import components, connect_to_robot
 
 
 class platePlot(QMainWindow):
+
     # resize_signal = QtCore.pyqtSignal()
 
     def __init__(self):
@@ -47,9 +50,10 @@ class platePlot(QMainWindow):
         self.expr_button_group = QButtonGroup()
         #
         # set up buttons
-        self.select_elisa, self.select_facs, self.select_qpcr = components.make_buttons('check', 'ELISA', 'qPCR', 'FACS')
-        self.robot_save, self.done_button = components.make_buttons('push', 'Save to robot', 'Save',)
-        self.load_map_button, self.clear_cells_button, self.enter_button = components.make_buttons('push', 'Load a map', 'Clear', 'Enter')
+        checks = components.make_buttons('check', 'ELISA', 'qPCR', 'FACS')
+        self.select_elisa, self.select_facs, self.select_qpcr = checks
+        buttons = components.make_buttons('push','Save to robot','Save','Load a map', 'Clear','Enter')
+        self.robot_save, self.done_button, self.load_map_button, self.clear_cells_button, self.enter_button = buttons
         self.table.setSelectionMode(QAbstractItemView.MultiSelection)
         self.group_button_group.setExclusive(True)
         #
@@ -58,6 +62,8 @@ class platePlot(QMainWindow):
         self.setup_expr_selection()
         self.init_plate()
         self.create_window()
+        #
+        # signals and actions
         self.entry_done()
         self.load_map_button.clicked.connect(self.load_map_from_file)
         self.robot_save.clicked.connect(self.save_expr_to_robot)
@@ -73,21 +79,19 @@ class platePlot(QMainWindow):
     def load_map_from_file(self):
         self.groups = []
         plate_path, _ = QFileDialog.getOpenFileName(self, caption='Load plate')
-        if os.path.isfile(plate_path):
-            with open(os.path.join(plate_path), 'r+') as file:
-                plate = list()
-                reader = csv.reader(file)
-                next(reader)
-                for row in reader:
-                    plate.append(row[1:])
-            for row in range(len(plate)):
-                for i in range(len(plate[row])):
-                    if plate[row][i].strip():
-                        self.table.setItem(row, i, QTableWidgetItem(plate[row][i]))
-                        if plate[row][i] not in self.groups:
-                            self.store_groups(plate[row][i])
+        if plate_path != '':
+            plate = actions.file_handler(plate_path, self.table, write=False)
+            for y, row in enumerate(plate):
+                for x, well in enumerate(row):
+                    if well.strip():
+                        self.table.setItem(y, x, QTableWidgetItem(well))
+                        if well not in self.groups:
+                            self.store_groups(well)
                     else:
-                        self.table.setItem(row, i, QTableWidgetItem(""))
+                        self.table.setItem(y, x, QTableWidgetItem(""))
+        else:
+            pass
+
 
 # Initialization and setup methods
 
@@ -103,6 +107,11 @@ class platePlot(QMainWindow):
         self.table.verticalHeader().setSectionResizeMode(QHeaderView.Stretch)
         self.input_box = components.create_input_box(self.input_box, "Enter group name")
 
+    def init_plate(self):
+        self.table = components.setup_table(self.table)
+
+# robot stuff
+
     def save_expr_to_robot(self):
         saved_path = self.save_and_quit()
         success = self.copy_file_to_robot(saved_file_path=saved_path, expr_type=self.expr_button_group.checkedButton().text())
@@ -115,8 +124,7 @@ class platePlot(QMainWindow):
                 self.reset_plate()
         else:
             QMessageBox.about(self, 'Connection problem',
-                                       'Try again. If the problem persists, check connection with Opentrons app'
-                                 )
+                              "Try again. If the problem persists, check connection with Opentrons app")
 
     def copy_file_to_robot(self, saved_file_path, expr_type: str):
         robot = connect_to_robot.OT2Connect(local_path=saved_file_path, file_name=os.path.split(saved_file_path)[-1],
@@ -129,20 +137,13 @@ class platePlot(QMainWindow):
             # Should address this with a small popup
             return False
 
-
-
-    def init_plate(self):
-        self.table = components.setup_table(self.table)
-
-
-
     def create_window(self):
         self.table_layout.addWidget(self.table, stretch=0)
         components.add_to_box_layout(self.side_layout, self.clear_cells_button, self.done_button, self.robot_save,
                                      self.load_map_button, self.box_label, self.input_box, self.enter_button,
                                      alignment=Qt.AlignBottom)
-        self.main_layout.addLayout(self.side_layout, stretch=15)
-        self.main_layout.addLayout(self.table_layout, stretch=85)
+        components.add_to_box_layout(self.main_layout, self.side_layout, alignment=None, stretch=15)
+        components.add_to_box_layout(self.main_layout, self.table_layout, alignment=None, stretch=85)
         self.main_widg.setLayout(self.main_layout)
         self.setCentralWidget(self.main_widg)
 
@@ -157,15 +158,7 @@ class platePlot(QMainWindow):
     # if cell has items and is clicked, delete them
     # if cell is empty, populate with text from selected button
     def fill_cells(self, items):
-        for i in items:
-            # Fill and remove TableWidgetItem objects rather than fill text
-            if self.table.item(*i) is None:
-                filler = QTableWidgetItem(self.group_button_group.checkedButton().text())
-                self.table.setItem(*i, filler)
-            else:
-                self.table.item(*i).setText(self.group_button_group.checkedButton().text())
-                self.table_layout.update()
-        self.table.clearSelection()
+        actions.fill_cells(items=items, table=self.table, button_group=self.group_button_group)
 
     def entry_done(self):
         self.input_box.returnPressed.connect(lambda: self.store_groups(self.input_box.text()))
@@ -174,21 +167,7 @@ class platePlot(QMainWindow):
 # data storage and export
     def save_and_quit(self):
         path, _ = QFileDialog.getSaveFileName(self)
-        if path != "" and path is not None:
-            data = []
-            for row in range(self.table.rowCount()):
-                rows = []
-                for col in range(self.table.columnCount()):
-                    to_save = self.table.item(row, col)
-                    if to_save is not None:
-                        rows.append(to_save.text())
-                    else:
-                        rows.append("")
-                data.append(rows)
-    #   else statement
-            df = pd.DataFrame(data, index=pd.Index(list('ABCDEFGH')), columns=range(1, 13))
-            df.to_csv(path)
-            self.save_path = path
+        self.save_path = actions.file_handler(path=path, table=self.table, write=True)
         return path
 
 # Update and store user entered data
@@ -203,10 +182,10 @@ class platePlot(QMainWindow):
             self.box_label.setText("That group already exists")
 
     def add_checkbox(self):
-        button = QRadioButton(self.groups[-1])
-        self.group_buttons.append(button)
-        self.group_button_group.addButton(button)
-        self.side_layout.addWidget(button)
+        buttons = components.make_buttons('radio', self.groups[-1])
+        self.group_buttons.append(buttons)  # might not need this self var
+        components.add_button(self.group_button_group, *buttons)
+        components.add_to_box_layout(self.side_layout, *buttons)
 
     def reset_plate(self):
         self.table.clear()
@@ -235,8 +214,19 @@ class platePlot(QMainWindow):
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
+    path = os.path.join(os.path.dirname(sys.modules[__name__].__file__), '../resources/smiley.jpg')
+    app.setWindowIcon(QtGui.QIcon(path))
+    app.setApplicationName('Pl8 Plo0t3r')
+    app.setApplicationDisplayName('Pl8 Plo0t3r')
+
+    app.applicationDisplayName()
     plate = platePlot()
+    plate.setWindowIcon(QtGui.QIcon(path))
     plate.show()
+    import ctypes
+
+    # myappid = 'mycompany.myproduct.subproduct.version'  # arbitrary string
+    # ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
     if plate is not None:
         sys.exit(app.exec_())
 
