@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                python setup.py sdist bdist_wheel
+                sh 'python setup.py sdist bdist_wheel'
                 echo 'Building'
             }
         }
@@ -14,7 +14,7 @@ pipeline {
                 echo $HOME
                 /Users/coltongarelli/anaconda3/bin/activate PlateMapper
                 chmod ug+x /app/local/anaconda3/bin/activate
-                pytest /tests
+                sh 'pytest ./tests/*'
             }
         }
         stage('Deploy') {
