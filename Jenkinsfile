@@ -14,8 +14,7 @@ pipeline {
                 echo $HOME
                 /Users/coltongarelli/anaconda3/bin/activate PlateMapper
                 chmod ug+x /app/local/anaconda3/bin/activate
-                pytest /tests/*
-
+                pytest /tests
             }
         }
         stage('Deploy') {
