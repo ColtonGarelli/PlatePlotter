@@ -10,7 +10,6 @@ pipeline {
         }
         stage('Test') {
             steps {
-                #!/bin/bash
                 echo $PATH
                 echo $HOME
                 /Users/coltongarelli/anaconda3/bin/activate PlateMapper
