@@ -55,16 +55,12 @@ jobs:
           paths:
             - "/home/circleci/miniconda"
 
-      - save_cache:
-          key: miniconda-v1-${ENV_CHECKSUM}
-          paths:
-            - "/home/circleci/miniconda"
-
-      - run:
-          name: Installing package
-          command: |
-            export PATH="$HOME/miniconda/bin:$PATH"
-            source activate ${ENV_NAME}
+    - run:
+        name: Installing package
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source activate ${ENV_NAME}
+          pip install -e .[tests]
 
       - run:
           name: Running unit tests
