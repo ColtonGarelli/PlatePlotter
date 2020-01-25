@@ -56,6 +56,7 @@ jobs:
           conda list ${ENV_NAME}
           conda install pytest
 
+
     - save_cache:
         key: miniconda-v1-${ENV_CHECKSUM}
         paths:
@@ -75,14 +76,18 @@ jobs:
         name: Running unit tests
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-          python -m pytest ./tests
+          coverage run -m pytest
+          coverage report
+          coverage html
 
     - store_test_results:
-        path: test_results
+        path: htmlcov
 
     - run:
         name: Uploading coverage
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
+          pip install coverage
+
           codecov
