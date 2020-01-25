@@ -19,9 +19,6 @@
 #      # - image: circleci/postgres:9.4
 version: 2.1
 
-orbs:
-  codecov: codecov/codecov@1.0.2
-
 jobs:
   build:
     docker:
@@ -80,7 +77,6 @@ jobs:
           coverage run -m pytest
           coverage report
           coverage html
-          codecov
 
     - store_test_results:
         path: htmlcov
