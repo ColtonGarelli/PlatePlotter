@@ -20,6 +20,9 @@
 version: 2
 jobs:
   build:
+    macos:
+      xcode: "11.3.0"
+    resource_class: large
     steps:
     - checkout
     - restore_cache:
