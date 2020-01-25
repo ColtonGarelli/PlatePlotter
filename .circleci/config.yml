@@ -22,7 +22,7 @@ jobs:
   build:
     docker:
       - image: buildpack-deps:trusty
-    resource_class: large
+
     steps:
     - checkout
     - restore_cache:
