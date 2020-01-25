@@ -8,14 +8,14 @@ jobs:
     docker:
       # specify the version you desire here
       # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
-      - image: circleci/python:3.6.1
+      - image: circleci/python:3.7.3
 
       # Specify service dependencies here if necessary
       # CircleCI maintains a library of pre-built images
       # documented at https://circleci.com/docs/2.0/circleci-images/
       # - image: circleci/postgres:9.4
 
-    working_directory: ~/repo
+    working_directory: ~/PlateMapper
 
     steps:
       - checkout
@@ -30,13 +30,23 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
-            pip install -r requirements.txt
+            #!/bin/bash -eo pipefail
+            if [[ ! -d /home/circleci/anaconda3 ]]; then
+                wget https://repo.continuum.io/miniconda/Anaconda3-latest-Linux-x86_64.sh -O anaconda.sh &&
+                bash anaconda.sh -b -f -p /home/circleci/anaconda2;
+            else
+                echo "Using cached miniconda";
+            fi
+            source ~/anaconda3/bin/activate PlateMapper
+            conda config --set always_yes yes
+            conda update -q conda
+            conda config --add channels conda-forge
+            conda install -n root conda-build
+            pip install --no-deps codacy-coverage
 
       - save_cache:
           paths:
-            - ./venv
+            - ./anaconda3
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       # run tests!
