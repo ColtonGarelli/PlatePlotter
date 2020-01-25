@@ -81,9 +81,6 @@ jobs:
     - store_test_results:
         path: htmlcov
 
-    - codecov/upload:
-        file: "codecov"
-
     - run:
         name: Uploading coverage
         command: |
