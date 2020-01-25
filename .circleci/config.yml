@@ -20,8 +20,8 @@
 version: 2
 jobs:
   build:
-    macos:
-      xcode: "11.3.0"
+    docker:
+      - image: buildpack-deps:trusty
     resource_class: large
     steps:
     - checkout
