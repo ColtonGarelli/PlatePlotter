@@ -86,7 +86,7 @@ jobs:
         path: htmlcov
 
     - codecov/upload:
-        file: {{ "codecov" }}
+        file: "codecov"
 
     - run:
         name: Uploading coverage
