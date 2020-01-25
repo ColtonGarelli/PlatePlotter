@@ -85,10 +85,10 @@ jobs:
           coverage html
 
     - store_artifacts:
-        path: test-results
+        path: test-results/coverage
 
     - store_test_results:
-        path: test-results
+        path: test-results/coverage
 
     - run:
         name: Uploading coverage
