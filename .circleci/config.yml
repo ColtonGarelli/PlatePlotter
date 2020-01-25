@@ -44,7 +44,7 @@ jobs:
           command: |
             export PATH="$HOME/miniconda/bin:$PATH"
             export ENV_NAME="base"
-            if [ ! -d "/home/circleci/miniconda/envs/${ENV_NAME}" ]; then
+            if [ ! -d "/home/circleci/miniconda/envs/base" ]; then
               conda update -q conda
               source activate ${ENV_NAME}
             fi
