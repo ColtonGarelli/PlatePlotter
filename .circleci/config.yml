@@ -45,8 +45,6 @@ jobs:
             export PATH="$HOME/miniconda/bin:$PATH"
             if [ ! -d "/home/circleci/miniconda/envs/${ENV_NAME}" ]; then
               conda update -q conda
-#             conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
-              conda env create -f environment.yml
               source activate ${ENV_NAME}
             fi
             conda env list
