@@ -78,8 +78,7 @@ jobs:
           export PATH="$HOME/miniconda/bin:$PATH"
           pip install coverage
           coverage run -m pytest
-          coverage report
-          coverage html
+
 
 
     - store_artifacts:
