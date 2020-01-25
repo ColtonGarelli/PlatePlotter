@@ -4,13 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
+
                 sh 'python setup.py sdist bdist_wheel'
                 echo 'Building'
             }
         }
         stage('Test') {
             steps {
-            sh 'pytest ./test'
+            sh 'pytest tests'
             echo 'testing........'
 
             }
