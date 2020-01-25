@@ -87,6 +87,7 @@ jobs:
         path: test-results
 
     - codecov/upload:
+        mkdir codecov
         file: "codecov"
 
     - run:
