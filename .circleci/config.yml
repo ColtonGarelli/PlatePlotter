@@ -20,7 +20,7 @@
 version: 2
 jobs:
     working_directory: ~/PlateMapper
-    test_steps: &default_test_steps
+    steps: &default_test_steps
       - checkout
       - restore_cache:
         keys:
