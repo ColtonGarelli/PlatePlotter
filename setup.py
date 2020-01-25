@@ -9,5 +9,5 @@ setup(
     author='Colton J. Garelli',
     author_email='colton.garelli@umassmed.edu',
     description='Plot some plates!',
-    extras_require='pytest',
+    tests='./tests'
 )
