@@ -10,8 +10,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'make check || true'
-                sh 'make check'
+            sh 'pytest ./test/*'
+            echo 'testing........'
+
             }
         }
         stage('Deploy') {
