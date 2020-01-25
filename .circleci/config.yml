@@ -81,10 +81,10 @@ jobs:
           pytest --junitxml=test-results/junit.xml
 
     - store_artifacts:
-        path: ~/PlateMapper/test-results.xml
+        path: test-results
 
     - store_test_results:
-        path: ~/PlateMapper/test-results.xml
+        path: test-results
 
     - codecov/upload:
         file: "codecov"
