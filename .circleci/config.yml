@@ -43,8 +43,7 @@ jobs:
           name: Configuring conda
           command: |
             export PATH="$HOME/miniconda/bin:$PATH"
-            export ENV_NAME="base"
-            if [ ! -d "/home/circleci/miniconda/envs/base" ]; then
+            if [ ! -d "/home/circleci/miniconda/envs/${ENV_NAME}" ]; then
               conda update -q conda
               source activate ${ENV_NAME}
             fi
@@ -59,7 +58,9 @@ jobs:
       - run:
           name: Installing package
           command: |
+            echo ${ENV_NAME}
             export PATH="$HOME/miniconda/bin:$PATH"
+
             source activate ${ENV_NAME}
             pip install -e .[pytest]
 
