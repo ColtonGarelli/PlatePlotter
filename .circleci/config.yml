@@ -87,7 +87,7 @@ jobs:
 
     - codecov/upload:
         codecov
-        file: {{ codecov }}
+        file: codecov
 
     - run:
         name: Uploading coverage
