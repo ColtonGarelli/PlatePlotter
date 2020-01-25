@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_one.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,7 +186,7 @@
       <workItem from="1578582756861" duration="920000" />
       <workItem from="1579547293821" duration="23291000" />
       <workItem from="1579810360813" duration="8851000" />
-      <workItem from="1579821515878" duration="26590000" />
+      <workItem from="1579821515878" duration="26833000" />
     </task>
     <servers />
   </component>
