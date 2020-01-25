@@ -43,6 +43,7 @@ jobs:
           name: Configuring conda
           command: |
             export PATH="$HOME/miniconda/bin:$PATH"
+            echo ENV_NAME
             if [ ! -d "/home/circleci/miniconda/envs/${ENV_NAME}" ]; then
               conda update -q conda
               conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
@@ -50,7 +51,6 @@ jobs:
             fi
             conda env list
             conda list ${ENV_NAME}
-
       - save_cache:
           key: miniconda-v1-${ENV_CHECKSUM}
           paths:
