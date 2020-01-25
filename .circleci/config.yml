@@ -20,11 +20,11 @@
 version: 2
 jobs:
   working_directory: ~/PlateMapper
-  steps: &default_test_steps
+  steps:
     - checkout
     - restore_cache:
-      keys:
-        - miniconda-v1-${ENV_CHECKSUM}
+        keys:
+          - miniconda-v1-${ENV_CHECKSUM}
 
   # Download and cache dependencies
   - restore_cache:
