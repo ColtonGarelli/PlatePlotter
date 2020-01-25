@@ -19,63 +19,63 @@
 #      # - image: circleci/postgres:9.4
 version: 2
 jobs:
-    working_directory: ~/PlateMapper
-    steps: &default_test_steps
-      - checkout
-      - restore_cache:
-        keys:
-          - miniconda-v1-${ENV_CHECKSUM}
-
-    # Download and cache dependencies
+  working_directory: ~/PlateMapper
+  steps: &default_test_steps
+    - checkout
     - restore_cache:
-        keys:
-          - v1-dependencies-{{ checksum "environment.yml" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-    - run:
-        name: Installing Miniconda
-        command: |
-          if [ ! -d "/home/circleci/miniconda" ]; then
-            wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
-            bash miniconda.sh -b -p $HOME/miniconda
-            export PATH="$HOME/miniconda/bin:$PATH"
-            conda config --set always_yes yes --set changeps1 no
-          fi
-          sudo chown -R $USER.$USER $HOME
-    - run:
-        name: Configuring conda
-        command: |
+      keys:
+        - miniconda-v1-${ENV_CHECKSUM}
+
+  # Download and cache dependencies
+  - restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "environment.yml" }}
+        # fallback to using the latest cache if no exact match is found
+        - v1-dependencies-
+  - run:
+      name: Installing Miniconda
+      command: |
+        if [ ! -d "/home/circleci/miniconda" ]; then
+          wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+          bash miniconda.sh -b -p $HOME/miniconda
           export PATH="$HOME/miniconda/bin:$PATH"
-          echo ENV_NAME
-          conda update -q conda
-          conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
-          source activate ${ENV_NAME}
-          conda env list
-          conda list ${ENV_NAME}
+          conda config --set always_yes yes --set changeps1 no
+        fi
+        sudo chown -R $USER.$USER $HOME
+  - run:
+      name: Configuring conda
+      command: |
+        export PATH="$HOME/miniconda/bin:$PATH"
+        echo ENV_NAME
+        conda update -q conda
+        conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
+        source activate ${ENV_NAME}
+        conda env list
+        conda list ${ENV_NAME}
 
-    - save_cache:
-        key: miniconda-v1-${ENV_CHECKSUM}
-        paths:
-          - "/home/circleci/miniconda"
+  - save_cache:
+      key: miniconda-v1-${ENV_CHECKSUM}
+      paths:
+        - "/home/circleci/miniconda"
 
-    - run:
-        name: Installing package
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          source activate ${ENV_NAME}
-          pip install -e .[tests]
+  - run:
+      name: Installing package
+      command: |
+        export PATH="$HOME/miniconda/bin:$PATH"
+        source activate ${ENV_NAME}
+        pip install -e .[tests]
 
-    - run:
-        name: Running unit tests
-        command: |
-          /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
+  - run:
+      name: Running unit tests
+      command: |
+        /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
 
-    - store_test_results:
-        path: test_results
+  - store_test_results:
+      path: test_results
 
-    - run:
-        name: Uploading coverage
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          source activate ${ENV_NAME}
-          codecov
+  - run:
+      name: Uploading coverage
+      command: |
+        export PATH="$HOME/miniconda/bin:$PATH"
+        source activate ${ENV_NAME}
+        codecov
