@@ -79,6 +79,7 @@ jobs:
 
           mkdir test-results
           pytest --junitxml=test-results/junit.xml
+          pip install coverage
           coverage run -m pytest
           coverage report
           coverage html
