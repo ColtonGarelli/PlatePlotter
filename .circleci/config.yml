@@ -43,9 +43,9 @@ jobs:
           name: Configuring conda
           command: |
             export PATH="$HOME/miniconda/bin:$PATH"
-            echo "$ENV_NAME"
+            echo ENV_NAME
             conda update -q conda
-            conda env create -f PlateMapper/environment.yml
+            conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
             source activate ${ENV_NAME}
             conda env list
             conda list ${ENV_NAME}
