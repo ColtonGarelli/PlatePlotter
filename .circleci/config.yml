@@ -65,7 +65,7 @@ jobs:
     - run:
         name: Running unit tests
         command: |
-          /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
+          pytest ./tests
 
     - store_test_results:
         path: test_results
