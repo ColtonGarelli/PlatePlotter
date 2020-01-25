@@ -21,13 +21,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: buildpack-deps:trusty
+      - image: circleci/anaconda3
     steps:
     - checkout
     - restore_cache:
         keys:
           - miniconda-v1-${ENV_CHECKSUM}
-
     - run:
         name: Installing Miniconda
         command: |
