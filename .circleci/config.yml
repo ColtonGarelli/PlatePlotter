@@ -55,12 +55,12 @@ jobs:
           paths:
             - "/home/circleci/miniconda"
 
-    - run:
-        name: Installing package
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          source activate ${ENV_NAME}
-          pip install -e .[tests]
+      - run:
+          name: Installing package
+          command: |
+            export PATH="$HOME/miniconda/bin:$PATH"
+            source activate ${ENV_NAME}
+            pip install -e .[tests]
 
       - run:
           name: Running unit tests
