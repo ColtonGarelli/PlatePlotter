@@ -65,6 +65,7 @@ jobs:
     - run:
         name: Running unit tests
         command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
           python -m pytest ./tests
 
     - store_test_results:
