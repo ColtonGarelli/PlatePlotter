@@ -38,12 +38,13 @@ jobs:
       - run:
           name: install dependencies
           command: |
+            conda create -n PlateMapper pip
             pip install --upgrade pip
             pip install -r requirements.txt
 
       - save_cache:
           paths:
-            - ./venv
+            - ./anaconda3/envs/PlateMapper
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       # run tests!
