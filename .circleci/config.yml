@@ -77,7 +77,7 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
 
-          mkdir htmlcov
+
           pytest --junitxml=test-results/junit.xml
           pip install coverage
           coverage run -m pytest
