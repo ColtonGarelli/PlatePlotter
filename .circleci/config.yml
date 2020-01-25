@@ -28,10 +28,16 @@ jobs:
             - v1-dependencies-
 
       - run:
+          name: install conda
+          command: |
+              wget https://repo.continuum.io/miniconda/Miniconda3-4.7.10-Linux-x86_64.sh -O ~/miniconda.sh
+              chmod +x ~/miniconda.sh && ~/miniconda.sh -b
+              export PATH=$HOME/miniconda3/bin:$PATH
+              conda update --quiet --yes conda
+
+      - run:
           name: install dependencies
           command: |
-            python3 -m venv venv
-            . venv/bin/activate
             pip install --upgrade pip
             pip install -r requirements.txt
 
