@@ -89,9 +89,7 @@ jobs:
     - store_test_results:
         path: test-results
 
-    - codecov/upload:
-        mkdir codecov
-        file: "codecov"
+#
 
     - run:
         name: Uploading coverage
