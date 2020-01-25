@@ -48,6 +48,7 @@ jobs:
           fi
           conda env list
           conda list ${ENV_NAME}
+          conda install pytest
 
     - save_cache:
         key: miniconda-v1-${ENV_CHECKSUM}
