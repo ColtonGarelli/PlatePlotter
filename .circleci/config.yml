@@ -80,13 +80,13 @@ jobs:
           coverage run -m pytest
           coverage report
           coverage html
-
+          codecov
 
     - store_test_results:
         path: htmlcov
 
     - codecov/upload:
-        codecov
+
         file:
           - "codecov"
 
