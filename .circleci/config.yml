@@ -65,7 +65,7 @@ jobs:
     - run:
         name: Running unit tests
         command: |
-          pytest ./tests
+          python -m pytest ./tests
 
     - store_test_results:
         path: test_results
