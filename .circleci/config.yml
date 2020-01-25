@@ -54,32 +54,29 @@ jobs:
           key: miniconda-v1-${ENV_CHECKSUM}
           paths:
             - "/home/circleci/miniconda"
-      - run:
-          name: Installing package
-          command: |
-            export PATH="$HOME/miniconda/bin:$PATH"
-            source activate ${ENV_NAME}
 
       - save_cache:
           key: miniconda-v1-${ENV_CHECKSUM}
           paths:
             - "/home/circleci/miniconda"
 
-    - run:
-        name: Running unit tests
-        command: |
-          /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
+      - run:
+          name: Installing package
+          command: |
+            export PATH="$HOME/miniconda/bin:$PATH"
+            source activate ${ENV_NAME}
 
-    - store_test_results:
-        path: test_results
+      - run:
+          name: Running unit tests
+          command: |
+            /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
 
-    - run:
-        name: Uploading coverage
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          source activate ${ENV_NAME}
-          codecov
+      - store_test_results:
+          path: test_results
 
-      - store_artifacts:
-          path: test-reports
-          destination: test-reports
+      - run:
+          name: Uploading coverage
+          command: |
+            export PATH="$HOME/miniconda/bin:$PATH"
+            source activate ${ENV_NAME}
+            codecov
