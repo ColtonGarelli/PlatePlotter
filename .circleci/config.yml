@@ -82,10 +82,10 @@ jobs:
           coverage html
 
     - store_artifacts:
-        path: ~/repo/test-results.xml
+        path: ~/PlateMapper/test-results.xml
 
     - store_test_results:
-        path: ~/repo/test-results.xml
+        path: ~/PlateMapper/test-results.xml
 
     - codecov/upload:
         file: "codecov"
