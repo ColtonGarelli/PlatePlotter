@@ -77,7 +77,7 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
 
-          mkdir test-results
+          mkdir htmlcov
           pytest --junitxml=test-results/junit.xml
           pip install coverage
           coverage run -m pytest
@@ -85,10 +85,10 @@ jobs:
           coverage html
 
     - store_artifacts:
-        path: test-results
+        path: htmlcov
 
     - store_test_results:
-        path: test-results
+        path: htmlcov
 
     - run:
         name: Running unit tests again
