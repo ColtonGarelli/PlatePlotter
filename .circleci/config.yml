@@ -79,6 +79,9 @@ jobs:
 
           mkdir test-results
           pytest --junitxml=test-results/junit.xml
+          coverage run -m pytest
+          coverage report
+          coverage html
 
     - store_artifacts:
         path: test-results
