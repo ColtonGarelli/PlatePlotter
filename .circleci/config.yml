@@ -76,6 +76,7 @@ jobs:
         name: Running unit tests
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
+          pip install coverage
           coverage run -m pytest
           coverage report
           coverage html
@@ -88,6 +89,3 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
-          pip install coverage
-
-          codecov
