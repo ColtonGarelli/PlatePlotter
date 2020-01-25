@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="" />
+    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/tests/test_one.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_one.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +43,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/.circleci" />
       <recent name="$PROJECT_DIR$/app" />
@@ -182,7 +185,7 @@
       <workItem from="1578582756861" duration="920000" />
       <workItem from="1579547293821" duration="23291000" />
       <workItem from="1579810360813" duration="8851000" />
-      <workItem from="1579821515878" duration="26337000" />
+      <workItem from="1579821515878" duration="26590000" />
     </task>
     <servers />
   </component>

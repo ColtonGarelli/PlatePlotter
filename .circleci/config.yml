@@ -55,6 +55,9 @@ jobs:
         paths:
           - "/home/circleci/miniconda"
 
+    - store_test_results:
+        path: test-results
+
     - run:
         name: Installing package
         command: |
