@@ -22,7 +22,6 @@ jobs:
   build:
     docker:
       - image: buildpack-deps:trusty
-
     steps:
     - checkout
     - restore_cache:
@@ -49,7 +48,6 @@ jobs:
         name: Configuring conda
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-          echo ENV_NAME
           conda update -q conda
           conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
           source activate ${ENV_NAME}
