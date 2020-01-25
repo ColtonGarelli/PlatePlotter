@@ -2,6 +2,9 @@
 #
 # Check https://circleci.com/docs/2.0/language-python/ for more details
 #
+
+# conda setup pulled from: https://discuss.circleci.com/t/workflows-very-similar-workflows-reducing-redundancy-in-configuration/22046/5
+
 version: 2
 jobs:
   build:
@@ -57,36 +60,25 @@ jobs:
             export PATH="$HOME/miniconda/bin:$PATH"
             source activate ${ENV_NAME}
 
-#      - run:
-#          name: install conda
-#          command: |
-#              wget https://repo.continuum.io/miniconda/Miniconda3-4.7.10-Linux-x86_64.sh -O ~/miniconda.sh
-#              chmod +x ~/miniconda.sh && ~/miniconda.sh -b
-#              export PATH=$HOME/miniconda3/bin:$PATH
-#              conda update --quiet --yes conda
-#              conda create -n PlateMapper pip
-#
-#      - run:
-#          name: install dependencies
-#          command: |
-#              source activate PlateMapper
-#              pip install -r requirements.txt
-
       - save_cache:
           key: miniconda-v1-${ENV_CHECKSUM}
           paths:
             - "/home/circleci/miniconda"
 
-      # run tests!
-      # this example uses Django's built-in test-runner
-      # other common Python testing frameworks include pytest and nose
-      # https://pytest.org
-      # https://nose.readthedocs.io
-      - run:
-          name: run tests
-          command: |
-            . venv/bin/activate
-            python manage.py test
+    - run:
+        name: Running unit tests
+        command: |
+          /home/circleci/miniconda/envs/${ENV_NAME}/bin/pytest
+
+    - store_test_results:
+        path: test_results
+
+    - run:
+        name: Uploading coverage
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source activate ${ENV_NAME}
+          codecov
 
       - store_artifacts:
           path: test-reports
