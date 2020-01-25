@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-            sh 'pytest ./test/*'
+            sh 'pytest ./test'
             echo 'testing........'
 
             }
