@@ -81,11 +81,17 @@ jobs:
           coverage report
           coverage html
 
+
     - store_test_results:
         path: htmlcov
+
+    - codecov/upload:
+        codecov
+        file: {{ codecov }}
 
     - run:
         name: Uploading coverage
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
+
