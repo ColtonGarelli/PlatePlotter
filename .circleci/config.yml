@@ -40,7 +40,6 @@ jobs:
           name: install dependencies
           command: |
             source activate PlateMapper
-#            pip install --upgrade pip
             pip install -r requirements.txt
 
       - save_cache:
