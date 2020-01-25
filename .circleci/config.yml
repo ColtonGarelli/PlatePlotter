@@ -85,10 +85,25 @@ jobs:
           coverage html
 
     - store_artifacts:
-        path: test-results/coverage
+        path: test-results
 
     - store_test_results:
-        path: test-results/coverage
+        path: test-results
+
+    - run:
+        name: Running unit tests again
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          pip install coverage
+          coverage run -m pytest
+          coverage report
+          coverage html
+
+    - store_artifacts:
+        path: test-results
+
+    - store_test_results:
+        path: test-results
 
     - run:
         name: Uploading coverage
