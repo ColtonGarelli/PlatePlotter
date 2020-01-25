@@ -76,10 +76,9 @@ jobs:
         name: Running unit tests
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-          pip install coverage
-          coverage run -m pytest
-          coverage report
-          coverage html
+
+          mkdir test-results
+          pytest --junitxml=test-results/junit.xml
 
     - store_artifacts:
         path: ~/PlateMapper/test-results.xml
