@@ -82,7 +82,7 @@ jobs:
           coverage html
 
 
-    - store_test_results:
+    - store_artifacts:
         path: htmlcov
 
     - codecov/upload:
