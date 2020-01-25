@@ -30,22 +30,13 @@ jobs:
       - run:
           name: install dependencies
           command: |
-            if [[ ! -d /home/circleci/anaconda3 ]]; then
-                wget https://repo.continuum.io/miniconda/Anaconda3-latest-Linux-x86_64.sh -O anaconda.sh &&
-                bash anaconda.sh -b -f -p /home/circleci/anaconda2;
-            else
-                echo "Using cached miniconda";
-            fi
-            source ~/anaconda3/bin/activate PlateMapper
-            conda config --set always_yes yes
-            conda update -q conda
-            conda config --add channels conda-forge
-            conda install -n root conda-build
-            pip install --no-deps codacy-coverage
+            python3 -m venv venv
+            . venv/bin/activate
+            pip install -r requirements.txt
 
       - save_cache:
           paths:
-            - ./anaconda3
+            - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
       # run tests!
