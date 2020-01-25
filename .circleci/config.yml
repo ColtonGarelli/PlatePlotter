@@ -34,11 +34,11 @@ jobs:
               chmod +x ~/miniconda.sh && ~/miniconda.sh -b
               export PATH=$HOME/miniconda3/bin:$PATH
               conda update --quiet --yes conda
+              conda create -n PlateMapper pip
 
       - run:
           name: install dependencies
           command: |
-            conda create -n PlateMapper pip
             pip install --upgrade pip
             pip install -r requirements.txt
 
