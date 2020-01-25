@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
-    </list>
+    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +181,7 @@
       <workItem from="1578582756861" duration="920000" />
       <workItem from="1579547293821" duration="23291000" />
       <workItem from="1579810360813" duration="8851000" />
-      <workItem from="1579821515878" duration="18926000" />
+      <workItem from="1579821515878" duration="19478000" />
     </task>
     <servers />
   </component>
@@ -310,6 +308,10 @@
       <screen x="1440" y="35" width="1440" height="900" />
     </state>
     <state x="1818" y="107" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579820829316" />
+    <state x="1949" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579979916942">
+      <screen x="1440" y="35" width="1440" height="900" />
+    </state>
+    <state x="1949" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579979916942" />
     <state x="1825" y="249" width="670" height="659" key="search.everywhere.popup" timestamp="1579556681169">
       <screen x="1440" y="58" width="1440" height="877" />
     </state>
