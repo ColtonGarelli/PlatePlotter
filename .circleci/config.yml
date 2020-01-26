@@ -20,7 +20,7 @@
 version: 2.1
 
 orbs:
-  codecov: codecov/codecov@1.0.2
+  codecov: codecov/codecov@1.0.5
 
 jobs:
   build:
@@ -76,13 +76,7 @@ jobs:
         name: Running unit tests
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-
-
           pytest --junitxml=test-results/junit.xml
-          pip install coverage
-          coverage run -m pytest
-          coverage report
-          coverage html
 
     - store_artifacts:
         path: htmlcov
@@ -104,6 +98,12 @@ jobs:
 
     - store_test_results:
         path: test-results
+
+    - run: Build
+      command: |
+        export PATH="$HOME/miniconda/bin:$PATH"
+        cd ~/PlateMapper
+        python pyinstaller/Makespec.py --out=PlatePlotterTmp PlateMapper/main_window.py
 
     - run:
         name: Uploading coverage
