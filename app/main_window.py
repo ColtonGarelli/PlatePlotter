@@ -7,7 +7,7 @@ import pandas as pd
 from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLineEdit, QMainWindow, QHBoxLayout,\
     QLabel, QWidget, QCheckBox, QPushButton, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
     QMessageBox, Qt, QRadioButton, QHeaderView, QAction
-from PyQt5 import QtGui
+from PyQt5 import QtGui, QtWidgets
 
 from app import actions
 from app import components, connect_to_robot
@@ -210,7 +210,7 @@ class platePlot(QMainWindow):
         self.fill_cells(selections)
 
     def quit_app(self):
-        sys.exit(app.exec_())
+        QtWidgets.qApp.quit()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
@@ -223,10 +223,7 @@ if __name__ == '__main__':
     plate = platePlot()
     plate.setWindowIcon(QtGui.QIcon(path))
     plate.show()
-    import ctypes
-
-    # myappid = 'mycompany.myproduct.subproduct.version'  # arbitrary string
-    # ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+    plate.raise_()
     if plate is not None:
         sys.exit(app.exec_())
 
