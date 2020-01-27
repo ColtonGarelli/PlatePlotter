@@ -8,9 +8,7 @@ from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLin
     QLabel, QWidget, QCheckBox, QPushButton, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
     QMessageBox, Qt, QRadioButton, QHeaderView, QAction
 from PyQt5 import QtGui, QtWidgets
-
-from app import actions
-from app import components, connect_to_robot
+from app import actions, components, connect_to_robot
 
 
 # input group names

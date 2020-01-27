@@ -102,12 +102,14 @@ jobs:
     - run: Build
       command: |
         export PATH="$HOME/miniconda/bin:$PATH"
+        conda install pyinstaller
         cd ~/PlateMapper
-        python pyinstaller/Makespec.py --out=PlatePlotterTmp PlateMapper/main_window.py
+        python pyinstaller app/main_window.py
 
     - run:
         name: Uploading coverage
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
+
 
