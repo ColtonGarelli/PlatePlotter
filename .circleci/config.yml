@@ -99,12 +99,13 @@ jobs:
     - store_test_results:
         path: test-results
 
-    - run: Build
-      command: |
-        export PATH="$HOME/miniconda/bin:$PATH"
-        conda install pyinstaller
-        cd ~/PlateMapper
-        python pyinstaller app/main_window.py
+    - run:
+        name: Building package
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          conda install pyinstaller
+          cd ~/PlateMapper
+          python pyinstaller app/main_window.py
 
     - run:
         name: Uploading coverage
