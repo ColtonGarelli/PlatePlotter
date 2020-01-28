@@ -108,6 +108,7 @@ jobs:
           conda install pyinstaller
           pyinstaller app/main_window.py
           pyinstaller main_window.spec
+          y
 
     - run:
         name: Uploading coverage
