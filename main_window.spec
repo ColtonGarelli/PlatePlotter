@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['app/main_window.py'],
+a = Analysis(['main_window.py'],
              pathex=['/Users/coltongarelli/PycharmProjects/PlateMapper'],
              binaries=[],
              datas=[],
