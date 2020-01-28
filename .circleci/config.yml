@@ -102,7 +102,7 @@ jobs:
     - run:
 
         name: Building package
-        working_direcory: PlateMapper
+        working_direcory: ~/PlateMapper
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           conda install pyinstaller
