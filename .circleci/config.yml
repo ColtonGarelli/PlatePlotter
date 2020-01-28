@@ -104,7 +104,7 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           conda install pyinstaller
-          pyinstaller ~/PlateMaooer/app/main_window.py
+          pyinstaller PlateMapper/app/main_window.py
 
     - run:
         name: Uploading coverage
