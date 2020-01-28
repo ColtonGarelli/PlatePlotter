@@ -106,8 +106,8 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           conda install pyinstaller
-
           pyinstaller app/main_window.py
+          pyinstaller main_window.spec
 
     - run:
         name: Uploading coverage
