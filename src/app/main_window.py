@@ -1,14 +1,14 @@
-import csv
 import os
 import sys
-from typing import List, Any
+from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
-import pandas as pd
 from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLineEdit, QMainWindow, QHBoxLayout,\
-    QLabel, QWidget, QCheckBox, QPushButton, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
-    QMessageBox, Qt, QRadioButton, QHeaderView, QAction
+    QLabel, QWidget, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
+    QMessageBox, Qt, QHeaderView, QAction
 from PyQt5 import QtGui, QtWidgets
-from app import actions, components, connect_to_robot
+from src.app import connect_to_robot
+from src.app import components, actions
+
 
 
 # input group names
@@ -50,7 +50,7 @@ class platePlot(QMainWindow):
         # set up buttons
         checks = components.make_buttons('check', 'ELISA', 'qPCR', 'FACS')
         self.select_elisa, self.select_facs, self.select_qpcr = checks
-        buttons = components.make_buttons('push','Save to robot','Save','Load a map', 'Clear','Enter')
+        buttons = components.make_buttons('push', 'Save to robot', 'Save', 'Load a map', 'Clear', 'Enter')
         self.robot_save, self.done_button, self.load_map_button, self.clear_cells_button, self.enter_button = buttons
         self.table.setSelectionMode(QAbstractItemView.MultiSelection)
         self.group_button_group.setExclusive(True)
@@ -211,17 +211,19 @@ class platePlot(QMainWindow):
         QtWidgets.qApp.quit()
 
 if __name__ == '__main__':
-    app = QApplication(sys.argv)
+    # app = QApplication(sys.argv)
+    app = ApplicationContext()
     path = os.path.join(os.path.dirname(sys.modules[__name__].__file__), '../resources/smiley.jpg')
-    app.setWindowIcon(QtGui.QIcon(path))
-    app.setApplicationName('Pl8 Plo0t3r')
-    app.setApplicationDisplayName('Pl8 Plo0t3r')
-
-    app.applicationDisplayName()
+    # app.setWindowIcon(QtGui.QIcon(path))
+    # app.setApplicationName('Pl8 Plo0t3r')
+    # app.setApplicationDisplayName('Pl8 Plo0t3r')
+    #
+    # app.applicationDisplayName()
     plate = platePlot()
     plate.setWindowIcon(QtGui.QIcon(path))
     plate.show()
     plate.raise_()
     if plate is not None:
-        sys.exit(app.exec_())
+        # sys.exit(app.exec_())
+        sys.exit(app.app.exec_())
 
