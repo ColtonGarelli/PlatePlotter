@@ -1,5 +1,0 @@
-('/Users/coltongarelli/anaconda3/envs/PlatePlotter/lib/python3.7/site-packages/PlateMapper-0.0.1-py3.7.egg',
- None,
- {'*.pyc', '*.so', '*.py', 'EGG-INFO', '*.cpython-37m-darwin.so', '*.abi3.so'},
- 'DATA',
- [])
