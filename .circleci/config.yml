@@ -106,7 +106,7 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           pip install fbs
-          fbs freeze
+          fbs freeze --debug
           fbs installer
 
     - run:
