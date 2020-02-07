@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" afterDir="false" />
@@ -18,6 +19,15 @@
       <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/connect_to_robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connect_to_robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/empty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/empty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
+>>>>>>> fbs build success
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,11 +74,19 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/main/python" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/resources" />
+=======
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/.circleci" />
+      <recent name="$PROJECT_DIR$/app" />
+>>>>>>> fbs build success
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -206,8 +224,12 @@
       <workItem from="1579821515878" duration="32283000" />
       <workItem from="1580066352200" duration="8338000" />
       <workItem from="1580142930893" duration="6951000" />
+<<<<<<< HEAD
       <workItem from="1581047156532" duration="2473000" />
       <workItem from="1581089085852" duration="340000" />
+=======
+      <workItem from="1581047156532" duration="248000" />
+>>>>>>> fbs build success
     </task>
     <servers />
   </component>
