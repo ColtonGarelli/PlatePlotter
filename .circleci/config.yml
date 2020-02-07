@@ -100,14 +100,13 @@ jobs:
         path: test-results
 
     - run:
-
         name: Building package
 
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-          pip install fbs
-          fbs freeze --debug
-          fbs installer
+          pip install fbs, pyinstaller==3.5 setuptools==44.0.0 pyqt5==5.9.2
+          pyinstaller main_window.spec --clean -y -n Plate Plotter
+
 
     - run:
         name: Uploading coverage
