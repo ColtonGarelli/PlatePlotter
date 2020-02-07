@@ -99,7 +99,6 @@ jobs:
     - store_test_results:
         path: test-results
 
-
     - run:
         name: Uploading coverage
         command: |

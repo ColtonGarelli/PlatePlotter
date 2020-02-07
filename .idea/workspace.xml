@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
