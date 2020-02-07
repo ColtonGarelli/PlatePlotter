@@ -56,7 +56,7 @@
  [],
  False,
  False,
- 1581047582,
+ 1581089170,
  [('runw',
    '/Users/coltongarelli/anaconda3/envs/PlatePlotter/lib/python3.7/site-packages/PyInstaller/bootloader/Darwin-64bit/runw',
    'EXECUTABLE')])
