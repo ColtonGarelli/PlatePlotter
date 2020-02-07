@@ -106,7 +106,8 @@ jobs:
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
           pip install fbs setuptools==44.0.0 pyqt5==5.9.2
-          fbs freeze
+          python setup.py install
+          fbs freeze --debug
           fbs installer
 
     - run:
