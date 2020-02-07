@@ -105,10 +105,9 @@ jobs:
 
         command: |
           export PATH="$HOME/miniconda/bin:$PATH"
-          conda install pyinstaller
-          pyinstaller app/main_window.py
-          pyinstaller main_window.spec
-          y
+          pip install fbs setuptools==44.0.0 pyqt5==5.9.2
+          fbs freeze
+          fbs installer
 
     - run:
         name: Uploading coverage
