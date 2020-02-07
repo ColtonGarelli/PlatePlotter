@@ -1,13 +1,13 @@
 import os
 import sys
-from fbs_runtime.application_context.PyQt5 import ApplicationContext
+# from fbs_runtime.application_context.PyQt5 import ApplicationContext
 
 from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLineEdit, QMainWindow, QHBoxLayout,\
     QLabel, QWidget, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
     QMessageBox, Qt, QHeaderView, QAction
 from PyQt5 import QtGui, QtWidgets
-from src.app import connect_to_robot
-from src.app import components, actions
+from app import connect_to_robot
+from app import components, actions
 
 
 
@@ -211,8 +211,8 @@ class platePlot(QMainWindow):
         QtWidgets.qApp.quit()
 
 if __name__ == '__main__':
-    # app = QApplication(sys.argv)
-    app = ApplicationContext()
+    app = QApplication(sys.argv)
+    # app = ApplicationContext()
     path = os.path.join(os.path.dirname(sys.modules[__name__].__file__), '../resources/smiley.jpg')
     # app.setWindowIcon(QtGui.QIcon(path))
     # app.setApplicationName('Pl8 Plo0t3r')
@@ -225,5 +225,5 @@ if __name__ == '__main__':
     plate.raise_()
     if plate is not None:
         # sys.exit(app.exec_())
-        sys.exit(app.app.exec_())
+        sys.exit(app.exec_())
 

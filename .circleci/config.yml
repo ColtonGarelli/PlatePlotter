@@ -99,20 +99,6 @@ jobs:
     - store_test_results:
         path: test-results
 
-<<<<<<< HEAD
-
-
-=======
-    - run:
-
-        name: Building package
-
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          pip install fbs
-          fbs freeze --debug
-          fbs installer
->>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
 
     - run:
         name: Uploading coverage
@@ -120,7 +106,6 @@ jobs:
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
 
-<<<<<<< HEAD
   build-windows:
     executor:
       name: win/vs2019
@@ -133,7 +118,3 @@ jobs:
             export PATH="$HOME/miniconda/bin:$PATH"
             pip install fbs, pyinstaller==3.5 setuptools==44.0.0 pyqt5==5.9.2
             pyinstaller main_window.spec --clean -y -n Plate Plotter
-
-=======
->>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
-
