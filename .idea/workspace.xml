@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="" />
+    <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/connect_to_robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connect_to_robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/empty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/empty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Setup Script" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -37,22 +45,23 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$/resources" />
       <recent name="$PROJECT_DIR$/.circleci" />
       <recent name="$PROJECT_DIR$/app" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
   </component>
-  <component name="RunManager" selected="Python.test_one">
-    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python">
       <module name="PlateMapper" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -144,7 +153,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.test_one" />
-        <item itemvalue="Python.app" />
         <item itemvalue="Python.connect_to_robot" />
       </list>
     </recent_temporary>
@@ -187,6 +195,7 @@
       <workItem from="1579821515878" duration="32283000" />
       <workItem from="1580066352200" duration="8338000" />
       <workItem from="1580142930893" duration="6951000" />
+      <workItem from="1581047156532" duration="248000" />
     </task>
     <servers />
   </component>
@@ -300,10 +309,10 @@
     <state width="1398" height="249" key="GridCell.Tab.1.right/0.23.1440.877/1440.35.1440.900@1440.35.1440.900" timestamp="1580065847333" />
     <state width="1398" height="249" key="GridCell.Tab.1.right/0.23.1440.877/1440.58.1440.877@1440.58.1440.877" timestamp="1579826911608" />
     <state width="1096" height="284" key="GridCell.Tab.1.right/0.23.1440.877@0.23.1440.877" timestamp="1577912452708" />
-    <state x="1669" y="124" key="SettingsEditor" timestamp="1579818885180">
+    <state x="1669" y="124" key="SettingsEditor" timestamp="1581047405300">
       <screen x="1440" y="35" width="1440" height="900" />
     </state>
-    <state x="1669" y="124" key="SettingsEditor/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579818885180" />
+    <state x="1669" y="124" key="SettingsEditor/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1581047405300" />
     <state width="569" height="438" key="XDebugger.FullValuePopup" timestamp="1577901628354">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
@@ -336,47 +345,47 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>46</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>44</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main_window.py</url>
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
           <line>80</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main_window.py</url>
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
           <line>129</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>42</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>39</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>41</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main_window.py</url>
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
           <line>168</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/main_window.py</url>
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
           <line>167</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
