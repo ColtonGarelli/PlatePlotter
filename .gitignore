@@ -6,6 +6,7 @@
 ./target
 ./logs
 ./dist
+./build
 ./.pytest_cache
 ./resources
 
