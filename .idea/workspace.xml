@@ -2,7 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +206,8 @@
       <workItem from="1579821515878" duration="32283000" />
       <workItem from="1580066352200" duration="8338000" />
       <workItem from="1580142930893" duration="6951000" />
-      <workItem from="1581047156532" duration="1774000" />
+      <workItem from="1581047156532" duration="2473000" />
+      <workItem from="1581089085852" duration="340000" />
     </task>
     <servers />
   </component>
@@ -211,11 +227,11 @@
     </state>
     <state x="1624" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579570047941" />
     <state x="1685" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1579894529320" />
-    <state x="2044" y="323" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580171125079">
-      <screen x="1440" y="35" width="1440" height="900" />
+    <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581089470589">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2044" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1580171125079" />
-    <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1579811442138" />
+    <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581089470589" />
     <state x="2245" y="361" key="#com.intellij.fileTypes.FileTypeChooser/1440.23.1920.1057/0.23.1440.877@1440.23.1920.1057" timestamp="1576772805290" />
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578321512441">
       <screen x="1440" y="0" width="1920" height="1080" />
@@ -313,10 +329,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="569" height="438" key="XDebugger.FullValuePopup/0.23.1440.877@0.23.1440.877" timestamp="1577901628354" />
-    <state x="1723" y="417" key="com.intellij.ide.util.TipDialog" timestamp="1580066352423">
-      <screen x="1440" y="35" width="1440" height="900" />
+    <state x="1817" y="472" key="com.intellij.ide.util.TipDialog" timestamp="1581089086661">
+      <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="1723" y="417" key="com.intellij.ide.util.TipDialog/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1580066352423" />
+    <state x="1817" y="472" key="com.intellij.ide.util.TipDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581089086661" />
     <state x="1817" y="472" key="com.intellij.ide.util.TipDialog/1440.23.1920.1057/0.23.1440.877@1440.23.1920.1057" timestamp="1578582774763" />
     <state x="1818" y="107" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1579820829316">
       <screen x="1440" y="35" width="1440" height="900" />
