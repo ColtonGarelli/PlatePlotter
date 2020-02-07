@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='PlateMapper',
     version='0.0.1',
-    packages=['app'],
+    packages=['src/app'],
     url='',
     license='',
     author='Colton J. Garelli',
