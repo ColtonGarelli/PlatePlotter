@@ -3,10 +3,14 @@
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 #
+./src
 ./target
 ./logs
 ./dist
+
 ./build
+=======
+
 ./.pytest_cache
 ./resources
 

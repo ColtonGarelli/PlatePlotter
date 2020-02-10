@@ -1,13 +1,31 @@
 import os
 import sys
+<<<<<<< HEAD
 from fbs_runtime.application_context.PyQt5 import ApplicationContext
+=======
+<<<<<<<< HEAD:app/main_window.py
+# from fbs_runtime.application_context.PyQt5 import ApplicationContext
+========
+from fbs_runtime.application_context.PyQt5 import ApplicationContext
+>>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351:build/lib/src/app/main_window.py
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
 
 from PyQt5.Qt import QApplication, QButtonGroup, QTableWidget, QVBoxLayout, QLineEdit, QMainWindow, QHBoxLayout,\
     QLabel, QWidget, QAbstractItemView, QActionGroup, QTableWidgetItem, QFileDialog, \
     QMessageBox, Qt, QHeaderView, QAction
 from PyQt5 import QtGui, QtWidgets
+<<<<<<< HEAD
 from src.app import connect_to_robot
 from src.app import components, actions
+=======
+<<<<<<<< HEAD:app/main_window.py
+from app import connect_to_robot
+from app import components, actions
+========
+from src.app import connect_to_robot
+from src.app import components, actions
+>>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351:build/lib/src/app/main_window.py
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
 
 
 
@@ -211,8 +229,18 @@ class platePlot(QMainWindow):
         QtWidgets.qApp.quit()
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     # app = QApplication(sys.argv)
     app = ApplicationContext()
+=======
+<<<<<<<< HEAD:app/main_window.py
+    app = QApplication(sys.argv)
+    # app = ApplicationContext()
+========
+    # app = QApplication(sys.argv)
+    app = ApplicationContext()
+>>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351:build/lib/src/app/main_window.py
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     path = os.path.join(os.path.dirname(sys.modules[__name__].__file__), '../resources/smiley.jpg')
     # app.setWindowIcon(QtGui.QIcon(path))
     # app.setApplicationName('Pl8 Plo0t3r')
@@ -225,5 +253,13 @@ if __name__ == '__main__':
     plate.raise_()
     if plate is not None:
         # sys.exit(app.exec_())
+<<<<<<< HEAD
         sys.exit(app.app.exec_())
+=======
+<<<<<<<< HEAD:app/main_window.py
+        sys.exit(app.exec_())
+========
+        sys.exit(app.app.exec_())
+>>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351:build/lib/src/app/main_window.py
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
 

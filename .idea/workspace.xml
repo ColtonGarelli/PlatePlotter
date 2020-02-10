@@ -2,7 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3bc0f6c-a192-4c21-98f5-905475e1e108" name="Default Changelist" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/MacOS/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter.app/Contents/Resources/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/Plate Plotter/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Analysis-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/BUNDLE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/COLLECT-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/EXE-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PKG-00.pkg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.pyz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/PYZ-00.toc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/Plate Plotter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/base_library.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/warn-Plate Plotter.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/PyInstaller/Plate Plotter/xref-Plate Plotter.html" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/actions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/actions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/connect_to_robot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/connect_to_robot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/empty.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/empty.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/main_window.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/main_window.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/environment.yml" beforeDir="false" afterPath="$PROJECT_DIR$/environment.yml" afterDir="false" />
+>>>>>>> fbs build success
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,7 +41,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Setup Script" />
+<<<<<<< HEAD
         <option value="Jupyter Notebook" />
+=======
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
         <option value="Python Script" />
       </list>
     </option>
@@ -46,7 +77,12 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+<<<<<<< HEAD
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/" />
       <recent name="$PROJECT_DIR$/src/main" />
@@ -56,6 +92,21 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/" />
       <recent name="$PROJECT_DIR$" />
+=======
+<<<<<<< HEAD
+      <recent name="$PROJECT_DIR$/src/app" />
+      <recent name="$PROJECT_DIR$/src/main/python" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/resources" />
+=======
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/images" />
+      <recent name="$PROJECT_DIR$/resources" />
+      <recent name="$PROJECT_DIR$/.circleci" />
+      <recent name="$PROJECT_DIR$/app" />
+>>>>>>> fbs build success
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     </key>
   </component>
   <component name="RunManager" selected="Python.app">
@@ -193,8 +244,17 @@
       <workItem from="1579821515878" duration="32283000" />
       <workItem from="1580066352200" duration="8338000" />
       <workItem from="1580142930893" duration="6951000" />
+<<<<<<< HEAD
       <workItem from="1581047156532" duration="2473000" />
       <workItem from="1581089085852" duration="2537000" />
+=======
+<<<<<<< HEAD
+      <workItem from="1581047156532" duration="2473000" />
+      <workItem from="1581089085852" duration="340000" />
+=======
+      <workItem from="1581047156532" duration="248000" />
+>>>>>>> fbs build success
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     </task>
     <servers />
   </component>
@@ -214,11 +274,19 @@
     </state>
     <state x="1624" y="147" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579570047941" />
     <state x="1685" y="134" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1579894529320" />
+<<<<<<< HEAD
     <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581090155802">
       <screen x="1440" y="0" width="1920" height="1080" />
     </state>
     <state x="2044" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1580171125079" />
     <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581090155802" />
+=======
+    <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581089470589">
+      <screen x="1440" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2044" y="323" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1580171125079" />
+    <state x="2245" y="346" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1920.1080/0.0.1440.900@1440.0.1920.1080" timestamp="1581089470589" />
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     <state x="2245" y="361" key="#com.intellij.fileTypes.FileTypeChooser/1440.23.1920.1057/0.23.1440.877@1440.23.1920.1057" timestamp="1576772805290" />
     <state x="2138" y="294" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1578321512441">
       <screen x="1440" y="0" width="1920" height="1080" />
@@ -328,11 +396,19 @@
     <state x="1818" y="107" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579820829316" />
     <state x="1949" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579979916942">
       <screen x="1440" y="35" width="1440" height="900" />
+<<<<<<< HEAD
     </state>
     <state x="1949" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579979916942" />
     <state x="1825" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1580068091475">
       <screen x="1440" y="35" width="1440" height="900" />
     </state>
+=======
+    </state>
+    <state x="1949" y="409" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1579979916942" />
+    <state x="1825" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1580068091475">
+      <screen x="1440" y="35" width="1440" height="900" />
+    </state>
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
     <state x="1825" y="231" width="670" height="676" key="search.everywhere.popup/0.0.1440.900/1440.35.1440.900@1440.35.1440.900" timestamp="1580068091475" />
     <state x="1825" y="249" width="670" height="659" key="search.everywhere.popup/0.23.1440.877/1440.58.1440.877@1440.58.1440.877" timestamp="1579556681169" />
     <state x="1958" y="355" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1580070552897">
@@ -345,47 +421,63 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>46</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>44</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/main_window.py</url>
+=======
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
           <line>80</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/main_window.py</url>
+=======
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
           <line>129</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>42</line>
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>39</line>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/app/actions.py</url>
+          <url>file://$PROJECT_DIR$/src/app/actions.py</url>
           <line>41</line>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/main_window.py</url>
+=======
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
           <line>168</line>
           <option name="timeStamp" value="23" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+<<<<<<< HEAD
           <url>file://$PROJECT_DIR$/app/main_window.py</url>
+=======
+          <url>file://$PROJECT_DIR$/src/app/main_window.py</url>
+>>>>>>> 656aca3a34e68749024922d9bc48ea9a87824351
           <line>167</line>
           <option name="timeStamp" value="24" />
         </line-breakpoint>
