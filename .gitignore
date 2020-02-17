@@ -4,6 +4,7 @@
 
 #
 ./src
+./src/main
 ./target
 ./logs
 ./dist

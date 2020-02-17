@@ -54,18 +54,23 @@ dependencies:
   - zlib=1.2.11=h0b31af3_1006
   - pip:
     - altgraph==0.17
+    - boto3==1.11.12
+    - botocore==1.14.12
+    - docutils==0.15.2
     - fbs==0.8.4
     - future==0.18.2
+    - jmespath==0.9.4
     - macholib==1.14
     - modulegraph==0.18
     - pefile==2019.4.18
-    - platemapper==0.0.1
     - py2app==0.20
-    - pyinstaller==3.5
+    - pyinstaller==3.6
     - pyqt5==5.9.2
     - pyqt5-sip==4.19.18
     - pyqtwebengine==5.12.1
+    - s3transfer==0.3.3
     - setuptools==44.0.0
     - sip==4.19.8
+    - urllib3==1.25.8
 prefix: /Users/coltongarelli/anaconda3/envs/PlatePlotter
 

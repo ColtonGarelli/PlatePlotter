@@ -1,0 +1,6 @@
+{
+    "app_name": "Plate Plotter",
+    "author": "Coltongarelli",
+    "main_module": "src/main/python/app/main_window.py",
+    "version": "0.0.0"
+}
