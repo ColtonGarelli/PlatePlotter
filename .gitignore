@@ -12,6 +12,7 @@
 ./.pytest_cache
 ./resources
 
+
 # User-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
