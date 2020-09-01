@@ -1,0 +1,111 @@
+
+# Python CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-python/ for more details
+#
+
+# conda setup pulled from: https://discuss.circleci.com/t/workflows-very-similar-workflows-reducing-redundancy-in-configuration/22046/5
+
+
+#  jobs:
+#  build:
+#    docker:
+#      # specify the version you desire here
+#      # use `-browsers` prefix for selenium tests, e.g. `3.6.1-browsers`
+#      - image: circleci/python:3.7.3
+#
+#      # Specify service dependencies here if necessary
+#      # CircleCI maintains a library of pre-built images
+#      # documented at https://circleci.com/docs/2.0/circleci-images/
+#      # - image: circleci/postgres:9.4
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.3
+    steps:
+    - checkout
+    - restore_cache:
+        keys:
+          - miniconda-v1-${ENV_CHECKSUM}
+
+    - run:
+        name: Installing Miniconda
+        command: |
+          if [ ! -d "/home/circleci/miniconda" ]; then
+            wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
+            bash miniconda.sh -b -p $HOME/miniconda
+            export PATH="$HOME/miniconda/bin:$PATH"
+            conda config --set always_yes yes --set changeps1 no
+          fi
+          sudo chown -R $USER.$USER $HOME
+    - run:
+        name: Configuring conda
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          if [ ! -d "/home/circleci/miniconda/envs/${ENV_NAME}" ]; then
+            conda update -q conda
+            conda env create -f ci/environment-${PYTHON}.yml --name=${ENV_NAME}
+            source activate ${ENV_NAME}
+          fi
+          conda env list
+          conda list ${ENV_NAME}
+          conda install pytest
+    - save_cache:
+        key: miniconda-v1-${ENV_CHECKSUM}
+        paths:
+          - "/home/circleci/miniconda"
+
+    - store_test_results:
+        path: test-results
+
+    - run:
+        name: Installing package
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source activate ${ENV_NAME}
+          pip install -e .[tests]
+    - run:
+        name: Running unit tests
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          pytest --junitxml=test-results/junit.xml
+    - store_artifacts:
+        path: htmlcov
+
+    - store_test_results:
+        path: htmlcov
+
+    - run:
+        name: Running unit tests again
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          pip install coverage
+          coverage run -m pytest
+          coverage report
+          coverage html
+    - store_artifacts:
+        path: test-results
+
+    - store_test_results:
+        path: test-results
+
+    - run:
+
+        name: Building package
+
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          conda install pyinstaller
+          pyinstaller app/main_window.py
+          pyinstaller main_window.spec
+          y
+    - run:
+        name: Uploading coverage
+        command: |
+          export PATH="$HOME/miniconda/bin:$PATH"
+          source activate ${ENV_NAME}
