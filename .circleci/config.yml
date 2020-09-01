@@ -69,11 +69,11 @@ jobs:
           export PATH="$HOME/miniconda/bin:$PATH"
           source activate ${ENV_NAME}
           pip install -e .[tests]
-    - run:
-        name: Running unit tests
-        command: |
-          export PATH="$HOME/miniconda/bin:$PATH"
-          pytest --junitxml=test-results/junit.xml
+#    - run:
+#        name: Running unit tests
+#        command: |
+#          export PATH="$HOME/miniconda/bin:$PATH"
+#          pytest --junitxml=test-results/junit.xml
     - store_artifacts:
         path: htmlcov
 
