@@ -1,4 +1,4 @@
-from PyQt5.Qt import *
+from PyQt5.Qt import QTableWidget
 import pandas as pd
 import csv, os
 

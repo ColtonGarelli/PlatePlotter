@@ -1,8 +1,7 @@
 """
 Trying to reduce file size for readability and reusability
 """
-from PyQt5.Qt import *
-import pandas as pd
+from PyQt5.Qt import QTableWidget, QBoxLayout, QObject, QWidget, QAbstractButton, QButtonGroup, QRadioButton, QPushButton, QCheckBox, Qt
 
 
 def setup_table(plate: QTableWidget):

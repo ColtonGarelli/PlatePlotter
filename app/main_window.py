@@ -18,6 +18,7 @@ from src.main.python.app import actions, connect_to_robot
 # make sure boxes dont belong to multiple groups
 # resize side panel
 # any more features?
+# TODO: need to add an option for a source plate
 # output plate
 
 
@@ -191,12 +192,8 @@ class platePlot(QMainWindow):
         self.groups.clear()
         self.update()
 
-
     def init_toolbar(self):
         pass
-
-    # def table_click(self):
-    #     print(self.table.currentColumn(), self.table.currentRow())
 
     def select_group(self):
         checked = self.group_button_group.checkedButton().text()
